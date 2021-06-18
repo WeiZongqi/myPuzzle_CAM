@@ -80,7 +80,9 @@ if __name__ == '__main__':
     model_path = './experiments/models/' + args.tag+ '.pth'
 
     set_seed(args.seed)
-    log_func = lambda string='': print(string)
+    # log_func = lambda string: print(string)
+    def log_func(x):
+        print(x)
 
     ###################################################################################
     # Transform, Dataset, DataLoader
