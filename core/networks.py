@@ -210,7 +210,9 @@ class AffinityNet(Backbone):
         x3 = self.stage3(x2).detach()
         x4 = self.stage4(x3).detach()
         x5 = self.stage5(x4).detach()
-        
+
+        print(x1.size(),'----')
+
         edge1 = self.fc_edge1(x1)
         edge2 = self.fc_edge2(x2)
         edge3 = self.fc_edge3(x3)[..., :edge2.size(2), :edge2.size(3)]
