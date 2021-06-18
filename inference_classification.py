@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
     log_func('[i] Architecture is {}'.format(args.architecture))
     log_func('[i] Total Params: %.2fM'%(calculate_parameters(model)))
-    log_func()
+    log_func('')
 
     try:
         use_gpu = os.environ['CUDA_VISIBLE_DEVICES']
