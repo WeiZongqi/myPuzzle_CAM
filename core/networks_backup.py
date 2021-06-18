@@ -155,7 +155,7 @@ class Classifier_For_Puzzle(Classifier):
 class AffinityNet(Backbone):
     def __init__(self, model_name, path_index=None):
         super().__init__(model_name, None, 'fix')
-        print(model_name,'++++')
+
         if '50' in model_name:
             fc_edge1_features = 64
         else:
