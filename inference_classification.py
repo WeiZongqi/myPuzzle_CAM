@@ -73,7 +73,7 @@ if __name__ == '__main__':
         experiment_name += '@val'
 
     experiment_name += '@scale=%s'%args.scales
-    
+    print(experiment_name, '+++++++')
     pred_dir = create_directory(f'./experiments/predictions/{experiment_name}/')
 
     model_path = './experiments/models/' + f'{args.tag}.pth'
