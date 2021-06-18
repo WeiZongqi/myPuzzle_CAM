@@ -77,7 +77,7 @@ if __name__ == '__main__':
     pred_dir = create_directory('./experiments/predictions/' + experiment_name + '/')
     # pred_dir = create_directory(f'./experiments/predictions/{experiment_name}/')
 
-    model_path = './experiments/models/' + f'{args.tag}.pth'
+    model_path = './experiments/models/' + args.tag+ '.pth'
 
     set_seed(args.seed)
     log_func = lambda string='': print(string)
