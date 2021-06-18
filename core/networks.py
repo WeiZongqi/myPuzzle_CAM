@@ -156,10 +156,11 @@ class AffinityNet(Backbone):
     def __init__(self, model_name, path_index=None):
         super().__init__(model_name, None, 'fix')
         print(model_name,'++++')
-        if '50' in model_name:
-            fc_edge1_features = 64
-        else:
-            fc_edge1_features = 128
+        # if '50' in model_name:
+        #     fc_edge1_features = 64
+        # else:
+        #     fc_edge1_features = 128
+        fc_edge1_features = 64
 
         self.fc_edge1 = nn.Sequential(
             nn.Conv2d(fc_edge1_features, 32, 1, bias=False),
@@ -211,7 +212,7 @@ class AffinityNet(Backbone):
         x4 = self.stage4(x3).detach()
         x5 = self.stage5(x4).detach()
 
-        print(x1.size(),'----')
+        # print(x1.size(),'----')
 
         edge1 = self.fc_edge1(x1)
         edge2 = self.fc_edge2(x2)
