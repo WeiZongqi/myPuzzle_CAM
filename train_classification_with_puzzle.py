@@ -334,7 +334,7 @@ if __name__ == '__main__':
         tiled_logits, tiled_features = model(tiled_images, with_cam=True)
         print(tiled_features.size(),'-------------------')
         re_features = merge_features(tiled_features, args.num_pieces, args.batch_size)
-
+        print(re_features.size(),"+=+=+=+=+=+=")
         ###############################################################################
         # Losses
         ###############################################################################
