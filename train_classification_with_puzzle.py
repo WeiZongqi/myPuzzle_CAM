@@ -330,9 +330,9 @@ if __name__ == '__main__':
         # Puzzle Module
         ###############################################################################
         tiled_images = tile_features(images, args.num_pieces)
-        prin(tiled_images.size(),'+++')
+        print(tiled_images.size(),'++++++++++++++++++')
         tiled_logits, tiled_features = model(tiled_images, with_cam=True)
-        print(tiled_features.size(),'---')
+        print(tiled_features.size(),'-------------------')
         re_features = merge_features(tiled_features, args.num_pieces, args.batch_size)
 
         ###############################################################################
