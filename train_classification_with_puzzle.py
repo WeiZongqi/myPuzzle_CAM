@@ -310,7 +310,8 @@ if __name__ == '__main__':
                 best_mIoU = mIoU
 
         return best_th, best_mIoU
-    
+
+
     writer = SummaryWriter(tensorboard_dir)
     train_iterator = Iterator(train_loader)
 
